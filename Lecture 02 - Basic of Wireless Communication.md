@@ -230,10 +230,10 @@ Sinc is perfect in theory, impossible in reality.
 
 ---
 
-If you want, I can also:
+## Signal Constellation 
+<img width="1909" height="934" alt="image" src="https://github.com/user-attachments/assets/d89a98f5-9221-45bd-aa0a-c79dd44f7d5b" />
+Signal Constellation
 
-* compare **sinc vs raised cosine**
-* explain **roll-off factor**
-* show **ISI with eye diagrams**
+A signal constellation is a graphical representation of modulated digital symbols in the signal space, usually plotted on the I-Q (In-phase and Quadrature) plane.
 
-Just say 👍
+Each point in the constellation represents one symbol.
