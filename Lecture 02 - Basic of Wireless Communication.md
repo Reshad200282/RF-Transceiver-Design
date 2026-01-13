@@ -105,26 +105,8 @@ As frequency increases, inductors are often replaced by:
 * Distributed elements
 
 ---
-
-### Typical $Q$ values
-
-* Audio inductors: $Q \approx 100$–$1000$
-* RF inductors: $Q \approx 10$–$100$
-* Microwave inductors: $Q < 20$
-
----
-
-### Practical RF design guidelines
-
-* Use the smallest inductance possible
-* Operate well below the SRF
-* Prefer air-core or planar inductors
-* Use distributed elements at high frequency
-
----
-
-If you want, I can also give you:
-
-* a **very short exam answer version**, or
-* a **single-page README summary**, or
-* diagrams explaining **SRF and parasitics**
+<img width="1204" height="589" alt="image" src="https://github.com/user-attachments/assets/0665c50a-babd-4b2d-8ea6-a7d7659790ae" />
+<img width="1194" height="575" alt="image" src="https://github.com/user-attachments/assets/b2159927-e8a1-4c9c-ad79-69675385a0be" />
+A linear time-invariant system is a system that satisfies superposition and whose behavior does not change with time.
+If a signal exists for a finite duration in time, its frequency spectrum must extend to infinite bandwidth,
+and if a signal is limited to a finite bandwidth, it must exist for infinite time. 
