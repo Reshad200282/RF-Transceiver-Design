@@ -25,16 +25,14 @@ Inductor ($L$) — stores energy in a magnetic field
 
 Energy expressions
 
-Resistor:
-
+Equations (GitHub LaTeX compatible)
+Resistor (power dissipated)
 𝑃
 =
 𝑉
 𝐼
 P=VI
-
-Capacitor:
-
+Capacitor (energy stored)
 𝐸
 =
 1
@@ -49,9 +47,7 @@ E=
 
 CV
 2
-
-Inductor:
-
+Inductor (energy stored)
 𝐸
 =
 1
@@ -62,6 +58,10 @@ Inductor:
 E=
 2
 1
+	​
+
+LI
+2
 	​
 
 LI
