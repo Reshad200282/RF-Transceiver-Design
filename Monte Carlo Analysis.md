@@ -16,7 +16,7 @@ Why Monte Carlo Analysis Is Needed
 
 In real life, components are not ideal:
 
-Resistors vary (±1%, ±5%)
+Resistors vary ($\pm 1%$, $\pm 5%$)
 
 Capacitors vary
 
@@ -48,26 +48,58 @@ Results are collected and analyzed statistically
 
 Mathematical Representation
 
-If output Y depends on parameter X:
+If output $Y$ depends on parameter $X$:
 
-Y = f(X)
+𝑌
+=
+𝑓
+(
+𝑋
+)
+Y=f(X)
 
-
-where X is randomly varied according to a probability distribution.
+where $X$ is randomly varied according to a probability distribution.
 
 Example (Resistor Variation)
 
 Nominal resistance:
 
-R = 1 kΩ ± 5%
-
+𝑅
+=
+1
+ 
+k
+Ω
+±
+5
+%
+R=1kΩ±5%
 
 Random value used in simulation:
 
-R_i = R_nominal + ΔR_i
+𝑅
+𝑖
+=
+𝑅
+nominal
++
+Δ
+𝑅
+𝑖
+R
+i
+	​
+
+=R
+nominal
+	​
+
++ΔR
+i
+	​
 
 
-where ΔR_i is a random number within tolerance.
+where $\Delta R_i$ is a random number within tolerance.
 
 Monte Carlo Simulation Steps
 
@@ -82,3 +114,27 @@ Run simulation for each sample
 Collect output results
 
 Analyze statistics
+
+Number of Runs
+
+More runs $\rightarrow$ better accuracy
+
+𝑁
+≈
+100
+ to 
+10,000
+N≈100 to 10,000
+Output Parameters
+
+Common statistical results:
+
+Mean (average)
+
+Standard deviation
+
+Minimum and maximum
+
+Histogram
+
+Yield percentage
