@@ -217,7 +217,7 @@ Sinc is perfect in theory, impossible in reality.
 
 ---
 
-## Signal Constellation 
+### Signal Constellation 
 <img width="1909" height="934" alt="image" src="https://github.com/user-attachments/assets/d89a98f5-9221-45bd-aa0a-c79dd44f7d5b" />
 Signal Constellation
 
