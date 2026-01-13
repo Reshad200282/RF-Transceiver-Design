@@ -108,5 +108,6 @@ As frequency increases, inductors are often replaced by:
 <img width="1204" height="589" alt="image" src="https://github.com/user-attachments/assets/0665c50a-babd-4b2d-8ea6-a7d7659790ae" />
 <img width="1194" height="575" alt="image" src="https://github.com/user-attachments/assets/b2159927-e8a1-4c9c-ad79-69675385a0be" />
 A linear time-invariant system is a system that satisfies superposition and whose behavior does not change with time.
+\
 If a signal exists for a finite duration in time, its frequency spectrum must extend to infinite bandwidth,
 and if a signal is limited to a finite bandwidth, it must exist for infinite time. 
