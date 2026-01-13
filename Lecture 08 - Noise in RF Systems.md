@@ -27,7 +27,7 @@ Active device + DC power → controlled noise
 * Uses active components such as:
 
   * Transistors
-  * Reverse-biased noise diodes
+  * Reverse-biased noise - diodes
 * Requires an external DC supply
 * Generated noise is amplified to a usable level
 
@@ -81,5 +81,6 @@ An active noise source is a powered circuit that intentionally generates noise u
 
 ---
 
-If you want, I can keep **all future answers in this exact GitHub-safe format** 👍
+<img width="1730" height="960" alt="image" src="https://github.com/user-attachments/assets/34db5c85-1fe9-406e-bba2-75d7f4637afd" />
+
 
