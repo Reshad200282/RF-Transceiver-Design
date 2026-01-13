@@ -166,21 +166,8 @@ Because it never truly ends:
 
 ---
 
-### 3. Infinite Precision Required
 
-Sinc has:
-
-* Infinite oscillations
-* Very small side lobes far away in time
-
-Real systems:
-
-* Have finite precision
-* Cannot generate or process infinite accuracy signals
-
----
-
-### 4. Extremely Sensitive to Timing Errors
+### 3. Extremely Sensitive to Timing Errors
 
 * Small sampling-time errors cause large ISI
 * Not robust to clock jitter
