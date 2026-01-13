@@ -17,4 +17,8 @@ Total power = 1000 mW + 100 mW = 1100 mW
 Formula:
 dBm = 10 × log₁₀(P in mW)
 dBm = 10 × log₁₀(1100) ≈ 10 × 3.04139  ≈ 30.4139 dBm  <br>
-a
+
+<img width="1207" height="599" alt="image" src="https://github.com/user-attachments/assets/46a06cd5-f170-4587-b663-10f386468ef1" />
+<img width="1206" height="591" alt="image" src="https://github.com/user-attachments/assets/d8816e1c-7d9b-4fc8-a874-6eb7586e58cb" />
+
+<img width="1207" height="595" alt="image" src="https://github.com/user-attachments/assets/98468d5e-165b-4c6b-9caa-428dc2a31062" />
