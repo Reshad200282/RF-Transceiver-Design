@@ -112,3 +112,116 @@ If you want, I can also give:
 * **2-mark / 5-mark exam versions**
 * **numerical examples**
 * **NF vs noise temperature comparison**
+
+
+
+
+Got it — thanks for sticking with it 👍
+If you’re using a **`.md` file on GitHub**, then the **only format that works 100% reliably** is **pure Markdown + inline code blocks** for equations.
+
+GitHub **does NOT render LaTeX unless MathJax is enabled** (which most repos don’t have).
+So the correct, safe approach is to use **inline code or fenced code blocks**.
+
+Below is the **proper GitHub `.md` format**.
+
+---
+
+## Why Noise Figure Is Needed
+
+In practical systems, every component adds noise.
+**Noise Figure (NF)** measures how much a device degrades the signal-to-noise ratio (SNR).
+
+---
+
+## Definition of Noise Figure
+
+```
+NF = SNR_in / SNR_out
+```
+
+Since noise always increases:
+
+```
+NF ≥ 1
+```
+
+---
+
+## Noise Figure in decibels
+
+```
+NF_dB = 10 log10(NF)
+```
+
+---
+
+## Why Gain Alone Is Not Enough
+
+Gain shows only signal amplification:
+
+```
+G = P_out / P_in
+```
+
+Two devices can have the same gain but very different noise performance.
+
+---
+
+## Effect on Receiver Sensitivity
+
+Minimum detectable signal:
+
+```
+P_min = k × T × B × NF
+```
+
+where:
+
+* `k` = Boltzmann constant
+* `T` = absolute temperature
+* `B` = bandwidth
+
+Lower NF → better sensitivity.
+
+---
+
+## Cascaded Systems (Friis Formula)
+
+Overall noise figure for cascaded stages:
+
+```
+NF_total = NF1
+         + (NF2 - 1) / G1
+         + (NF3 - 1) / (G1 × G2)
+         + ...
+```
+
+This shows:
+
+* First stage dominates system noise
+* Low-noise, high-gain LNA is critical
+
+---
+
+## One-line exam answer
+
+```
+Noise figure is a measure of how much a device degrades the signal-to-noise ratio.
+```
+
+---
+
+### ✅ Why this format is correct for `.md`
+
+* Works in **GitHub README.md**
+* No MathJax required
+* Clean and readable
+* Copy-paste safe
+
+If you want, I can:
+
+* format **all RF topics this way**
+* make a **full RF formula cheat sheet**
+* convert your **existing notes to GitHub-safe Markdown**
+
+Just say 👍
