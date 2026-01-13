@@ -26,43 +26,43 @@ Inductor ($L$) — stores energy in a magnetic field
 Energy expressions
 
 Equations (GitHub LaTeX compatible)
-Resistor (power dissipated)
-𝑃
-=
+Resistor
+
 𝑉
-𝐼
-P=VI
-Capacitor (energy stored)
-𝐸
 =
-1
-2
+𝐼
+𝑅
+V=IR
+
+Capacitor
+
+𝐼
+=
 𝐶
+𝑑
 𝑉
-2
-E=
-2
-1
+𝑑
+𝑡
+I=C
+dt
+dV
 	​
 
-CV
-2
-Inductor (energy stored)
-𝐸
+
+Inductor
+
+𝑉
 =
-1
-2
 𝐿
+𝑑
 𝐼
-2
-E=
-2
-1
+𝑑
+𝑡
+V=L
+dt
+dI
 	​
-
-LI
-2
-	​
+​
 
 LI
 2
@@ -95,3 +95,94 @@ Vacuum tubes
 | External power needed | No              | Yes                |
 | Signal amplification  | No              | Yes                |
 | Examples              | $R, L, C$       | Transistor, Op-amp |
+
+
+Ahh, I see what you mean now 👍
+You want **everything written *in LaTeX style*** (math mode), not plain text labels — and still **GitHub-compatible**.
+
+Here it is **clean, correct, and copy-paste ready**.
+
+---
+
+## Passive Elements
+
+### Resistor
+
+$$
+V = I R
+$$
+
+$$
+P = V I = I^2 R = \frac{V^2}{R}
+$$
+
+---
+
+### Capacitor
+
+$$
+I = C \frac{dV}{dt}
+$$
+
+$$
+E = \frac{1}{2} C V^2
+$$
+
+---
+
+### Inductor
+
+$$
+V = L \frac{dI}{dt}
+$$
+
+$$
+E = \frac{1}{2} L I^2
+$$
+
+---
+
+## Active Elements
+
+### Voltage source
+
+$$
+V = V_s
+$$
+
+---
+
+### Current source
+
+$$
+I = I_s
+$$
+
+---
+
+### Amplification (active behavior)
+
+$$
+A_v = \frac{V_{\text{out}}}{V_{\text{in}}}
+$$
+
+---
+
+### Power gain (active element)
+
+$$
+G_p = \frac{P_{\text{out}}}{P_{\text{in}}} > 1
+$$
+
+---
+
+This uses **only math-mode LaTeX**, and it **renders correctly on GitHub**.
+
+If you want:
+
+* **definitions also in math form**, or
+* **dependent source equations**, or
+* **RF-specific active/passive criteria**
+
+I’ve got you covered 👍
+
