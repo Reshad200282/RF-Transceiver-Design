@@ -26,43 +26,41 @@ Inductor ($L$) — stores energy in a magnetic field
 Energy expressions
 
 Equations (GitHub LaTeX compatible)
-Resistor
+### Resistor
 
-𝑉
-=
-𝐼
-𝑅
-V=IR
+$$
+V = I R
+$$
 
-Capacitor
+$$
+P = V I = I^2 R = \frac{V^2}{R}
+$$
 
-𝐼
-=
-𝐶
-𝑑
-𝑉
-𝑑
-𝑡
-I=C
-dt
-dV
-	​
+---
 
+### Capacitor
 
-Inductor
+$$
+I = C \frac{dV}{dt}
+$$
 
-𝑉
-=
-𝐿
-𝑑
-𝐼
-𝑑
-𝑡
-V=L
-dt
-dI
-	​
-​
+$$
+E = \frac{1}{2} C V^2
+$$
+
+---
+
+### Inductor
+
+$$
+V = L \frac{dI}{dt}
+$$
+
+$$
+E = \frac{1}{2} L I^2
+$$
+
+---​
 
 LI
 2
