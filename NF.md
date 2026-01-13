@@ -1,7 +1,7 @@
 Noise Figure: Measure of noise added by the circuit.
 
 ---
-
+---
 ## Why Noise Figure Is Needed
 
 In real systems, every component adds **noise**.
