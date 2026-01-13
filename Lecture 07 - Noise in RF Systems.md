@@ -3,13 +3,13 @@ In RF we use Power in dBm
 <img width="1206" height="593" alt="image" src="https://github.com/user-attachments/assets/f0f6dafc-63b2-4006-a999-cc7696e4d99c" />
 
 
-## Step 1: Convert both dBm values to linear power (milliwatts)
+## Step 1: Convert both dBm values to linear power (milliwatts) <br>
 Formula:
 P (mW) = 10^(dBm / 10)
-
+<br>
 30 dBm → 10^(30/10) = 10³ = 1000 mW (1 watt)
 20 dBm → 10^(20/10) = 10² = 100 mW
-
+<br>
 ## Step 2: Add the powers in the linear domain (normal addition)
 Total power = 1000 mW + 100 mW = 1100 mW
 Step 3: Convert total power back to dBm
