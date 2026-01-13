@@ -1,4 +1,4 @@
-Here’s a **clear RF-style explanation** with **GitHub-compatible LaTeX equations only**.
+Noise Figure: Measure of noise added by the circuit.
 
 ---
 
