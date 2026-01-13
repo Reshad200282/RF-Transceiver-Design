@@ -22,3 +22,4 @@ dBm = 10 × log₁₀(1100) ≈ 10 × 3.04139  ≈ 30.4139 dBm  <br>
 <img width="1206" height="591" alt="image" src="https://github.com/user-attachments/assets/d8816e1c-7d9b-4fc8-a874-6eb7586e58cb" />
 
 <img width="1207" height="595" alt="image" src="https://github.com/user-attachments/assets/98468d5e-165b-4c6b-9caa-428dc2a31062" />
+<img width="1199" height="593" alt="image" src="https://github.com/user-attachments/assets/09dc5bb4-1ca9-4a06-a6af-d16ce1d7fb00" />
