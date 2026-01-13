@@ -13,7 +13,7 @@ P (mW) = 10^(dBm / 10)
 ## Step 2: Add the powers in the linear domain (normal addition)
 Total power = 1000 mW + 100 mW = 1100 mW
 <br>
-Step 3: Convert total power back to dBm
+## Step 3: Convert total power back to dBm
 Formula:
 dBm = 10 × log₁₀(P in mW)
 dBm = 10 × log₁₀(1100) ≈ 10 × 3.04139  ≈ 30.4139 dBm
