@@ -265,3 +265,8 @@ These represent the two reference noise states used in practical **ON/OFF noise 
 - ENR indicates how much hotter the noise source is compared to room temperature
 - These concepts are essential for **noise figure measurement** and **receiver performance evaluation**
 
+<img width="1207" height="561" alt="image" src="https://github.com/user-attachments/assets/59101df6-dddd-4909-a76d-15399fce15c6" />
+
+## Example
+
+<img width="1179" height="560" alt="image" src="https://github.com/user-attachments/assets/8b961be4-574d-476d-aad2-126898d5f3f5" />
