@@ -1,7 +1,35 @@
 ## Power in Noise 
 <img width="1196" height="582" alt="image" src="https://github.com/user-attachments/assets/dc1a5021-3f12-4399-a46c-16a069c66ef0" />
 
-## Noise is independent of frequency 
+## **Noise is independent of frequency 
+
+## Why Thermal noise is called white noise ?
+
+1. What “white” means in noise
+
+In signal processing, “white” comes from an analogy with white light.
+
+White light = contains all colors (frequencies) equally
+
+White noise = contains all frequencies with equal power
+
+So if a noise has constant power spectral density (PSD) over frequency, we call it white.
+
+2. Thermal noise property
+
+For thermal (Johnson–Nyquist) noise, the power spectral density is:
+
+$$
+S_n(f) = kT
+$$​
+
+(f)=kT
+
+This means:
+
+It does NOT depend on frequency $f$
+
+Power per Hz is flat across the frequency axis
 
 <img width="1185" height="584" alt="image" src="https://github.com/user-attachments/assets/3ea88249-d0f6-4276-9d42-5e4fdd8cb21f" />
 <img width="1908" height="869" alt="image" src="https://github.com/user-attachments/assets/ca7e9e4e-4dc4-488b-84ea-c20d3eeb8154" />
