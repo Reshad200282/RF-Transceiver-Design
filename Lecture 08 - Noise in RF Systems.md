@@ -270,3 +270,221 @@ These represent the two reference noise states used in practical **ON/OFF noise 
 ## Example
 
 <img width="1179" height="560" alt="image" src="https://github.com/user-attachments/assets/8b961be4-574d-476d-aad2-126898d5f3f5" />
+
+<img width="1190" height="570" alt="image" src="https://github.com/user-attachments/assets/b9d75c99-c39d-40c8-9ff3-1135586df91d" />
+
+# Noise Figure (NF) — Detailed Explanation
+
+This section explains **Noise Figure** step-by-step, with physical intuition and full mathematical derivation, as used in RF and microwave system design.
+
+---
+
+## 1. Physical Meaning of Noise Figure
+
+Noise Figure quantifies how much **extra noise** a system adds compared to an ideal, noiseless system.
+
+- Signal **must** be amplified  
+- Noise **should not** be amplified or added (but it always is)  
+- NF measures this unavoidable degradation  
+
+If:
+
+- $\text{SNR}_{\text{in}} = \text{SNR}_{\text{out}}$ → ideal system  
+- $\text{SNR}_{\text{out}} < \text{SNR}_{\text{in}}$ → real system  
+
+---
+
+## 2. Formal Definition
+
+Noise **factor** is defined as:
+
+$$
+F = \frac{\text{SNR}_{\text{in}}}{\text{SNR}_{\text{out}}}
+$$
+
+Since all real systems add noise:
+
+$$
+F \ge 1
+$$
+
+Noise **figure** (in decibels):
+
+$$
+\text{NF} = 10 \log_{10}(F)
+$$
+
+---
+
+## 3. Input Noise Power (Thermal Noise)
+
+At the input, noise is dominated by thermal noise:
+
+$$
+N_i = k T_0 B
+$$
+
+where:
+- $k$ = Boltzmann constant  
+- $T_0 = 290 \ \text{K}$ (standard reference temperature)  
+- $B$ = system bandwidth  
+
+---
+
+## 4. Signal and Noise Flow Through a System
+
+Assume a system with power gain $G$.
+
+### Signal
+
+$$
+S_o = G S_i
+$$
+
+### Noise
+
+Output noise has **two components**:
+
+1. Amplified input noise:
+   $$
+   G N_i
+   $$
+
+2. Noise added by the system:
+   $$
+   N_{\text{added}}
+   $$
+
+Total output noise:
+
+$$
+N_o = G N_i + N_{\text{added}}
+$$
+
+---
+
+## 5. SNR Degradation Derivation
+
+### Input SNR
+
+$$
+\text{SNR}_{\text{in}} = \frac{S_i}{N_i}
+$$
+
+### Output SNR
+
+$$
+\text{SNR}_{\text{out}} =
+\frac{G S_i}{G N_i + N_{\text{added}}}
+$$
+
+Substitute into the noise factor definition:
+
+$$
+F =
+\frac{S_i / N_i}
+{G S_i / (G N_i + N_{\text{added}})}
+$$
+
+Cancel $S_i$:
+
+$$
+F = \frac{G N_i + N_{\text{added}}}{G N_i}
+$$
+
+$$
+F = 1 + \frac{N_{\text{added}}}{G N_i}
+$$
+
+---
+
+## 6. Equivalent Noise Temperature
+
+The system’s added noise is modeled as thermal noise from an **equivalent noise temperature** $T_e$:
+
+$$
+N_{\text{added}} = k T_e B
+$$
+
+Amplified input noise:
+
+$$
+G N_i = G k T_0 B
+$$
+
+Substitute into the noise factor expression:
+
+$$
+F =
+\frac{k (T_0 + T_e) B}
+{k T_0 B}
+$$
+
+Final result:
+
+$$
+F = 1 + \frac{T_e}{T_0}
+$$
+
+---
+
+## 7. Interpretation of Equivalent Noise Temperature
+
+- $T_e$ is **not** a physical temperature  
+- It represents how noisy the system behaves  
+- Lower $T_e$ ⇒ lower NF ⇒ better receiver  
+
+Examples:
+
+- Ideal system: $T_e = 0 \Rightarrow F = 1$  
+- Practical LNA: $T_e \approx 50$–$150 \ \text{K}$  
+
+---
+
+## 8. Noise Figure in dB (Practical Form)
+
+$$
+\text{NF (dB)} =
+10 \log_{10}
+\left(
+1 + \frac{T_e}{T_0}
+\right)
+$$
+
+At $T_0 = 290 \ \text{K}$:
+
+- $F = 2$ → NF = 3 dB  
+- $F = 4$ → NF = 6 dB  
+
+---
+
+## 9. Why Noise Figure Is Always ≥ 1
+
+- Resistors generate thermal noise  
+- Active devices generate shot and flicker noise  
+- Matching networks introduce loss  
+- Loss **before** gain is especially harmful  
+
+Therefore:
+
+> **The first RF stage dominates the overall system noise figure**
+
+---
+
+## 10. Practical RF Design Insight
+
+- Low-Noise Amplifiers (LNAs) must have **very low NF**
+- High gain **after** the LNA is acceptable
+- Passive loss before the LNA severely degrades NF
+
+This directly leads to the **Friis Noise Formula** for cascaded stages.
+
+---
+
+## 11. Key Results Summary
+
+- $F = \frac{\text{SNR}_{\text{in}}}{\text{SNR}_{\text{out}}}$
+- $F = 1 + \frac{T_e}{T_0}$
+- $\text{NF} = 10 \log_{10}(F)$
+- Lower NF ⇒ better receiver sensitivity
+- First stage NF is critical
