@@ -11,7 +11,7 @@ In signal processing, “white” comes from an analogy with white light.
 
 White light = contains all colors (frequencies) equally
 
-White noise = contains all frequencies with equal power
+* White noise = contains all frequencies with equal power
 
 So if a noise has constant power spectral density (PSD) over frequency, we call it white.
 
