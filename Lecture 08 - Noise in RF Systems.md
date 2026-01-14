@@ -1,6 +1,6 @@
 ## Power in Noise 
 <img width="1196" height="582" alt="image" src="https://github.com/user-attachments/assets/dc1a5021-3f12-4399-a46c-16a069c66ef0" />
-<br>
+
 ## Noise is independent of frequency 
 
 ## This is a heading
