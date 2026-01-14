@@ -20,7 +20,7 @@ So if a noise has constant power spectral density (PSD) over frequency, we call 
 For thermal (Johnson–Nyquist) noise, the power spectral density is:
 
 
- S_n(f) = kT
+## S_n(f) = kT
 
 Power Spectral Density of Thermal Noise in RF Systems
 Thermal Noise (Johnson–Nyquist Noise)
@@ -39,7 +39,7 @@ Noise Power Spectral Density
 
 The power spectral density (PSD) of thermal noise is given by:
 
-𝑆_𝑛(f)=kT [W/Hz]
+## 𝑆_𝑛(f)=kT [W/Hz]
 ​
 
 This means:
