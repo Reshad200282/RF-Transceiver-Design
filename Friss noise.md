@@ -9,20 +9,10 @@ It is written for **RF / microwave systems, receivers, and exam preparation**.
 
 For a cascade of stages such as amplifiers, mixers, and filters, the total noise factor is:
 
-$$
-F_{\text{total}}
-=
-F_1
-+ \frac{F_2 - 1}{G_1}
-+ \frac{F_3 - 1}{G_1 G_2}
-+ \cdots
-$$
 
-where:
-- $F_i$ = noise factor of stage $i$ (linear, **not in dB**)
-- $G_i$ = power gain of stage $i$ (linear)
 
----
+<img width="725" height="325" alt="image" src="https://github.com/user-attachments/assets/76ca12a0-e7e7-44fc-b137-537129bc1436" />
+
 
 ## 2. Core Physical Meaning
 
