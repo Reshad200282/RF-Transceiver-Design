@@ -1,29 +1,17 @@
-Bandwidth basically means how much data can move from one place to another in a given amount of time.
+## Bandwidth
 
-Think of it like a road 🚗
+**Bandwidth** is the maximum amount of data that can be transmitted over a network or communication channel in a given amount of time.
 
-A narrow road → only a few cars can pass at once → low bandwidth
+- Typically measured in **bits per second (bps)**  
+  - kbps (kilobits per second)  
+  - Mbps (megabits per second)  
+  - Gbps (gigabits per second)
 
-A wide highway → lots of cars at the same time → high bandwidth
+### Example
+- High bandwidth → faster data transfer (e.g., video streaming, file downloads)
+- Low bandwidth → slower data transfer
 
-In tech terms
-
-Bandwidth is usually:
-
-Measured in bits per second (bps)
-
-kbps = kilobits per second
-
-Mbps = megabits per second
-
-Gbps = gigabits per second
-
-Used to describe internet connections, networks, or communication channels
-
-Simple examples
-
-Streaming video needs high bandwidth
-
-Sending a text message needs very little bandwidth
-
-Slow internet = low bandwidth (or too many users sharing it)
+### Analogy
+Bandwidth is like the width of a road:
+- Narrow road → fewer cars at a time (low bandwidth)
+- Wide highway → many cars at once (high bandwidth)
