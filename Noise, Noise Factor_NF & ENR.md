@@ -143,7 +143,8 @@ Even simpler:
 
 > **Noise factor = how badly a device degrades the signal-to-noise ratio.**
 >
-> ## 3. Excess Noise Ratio (ENR)
+> 
+> # 3. Excess Noise Ratio (ENR)
 
 ### Definition (Power Form)
 
