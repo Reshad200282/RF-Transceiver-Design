@@ -1,12 +1,13 @@
-# Friis Formula — Physical Meaning and Intuition
+# Friis Formula — Physical Meaning and RF Intuition
 
-This section explains **Friis’ formula for cascaded noise** from a *physical* point of view — not just as a formula to memorize.
+This document explains **Friis’ formula for cascaded noise** from a *physical* point of view, not just as a mathematical expression.  
+It is written for **RF / microwave systems, receivers, and exam preparation**.
 
 ---
 
-## Friis Formula (Cascaded Noise)
+## 1. Friis Formula (Cascaded Noise)
 
-For a cascade of stages (amplifiers, mixers, filters):
+For a cascade of stages such as amplifiers, mixers, and filters, the total noise factor is:
 
 $$
 F_{\text{total}}
@@ -18,53 +19,53 @@ F_1
 $$
 
 where:
-- $F_i$ = noise factor of stage $i$ (linear, **not dB**)
+- $F_i$ = noise factor of stage $i$ (linear, **not in dB**)
 - $G_i$ = power gain of stage $i$ (linear)
 
 ---
 
-## Physical Meaning (Key Insight)
+## 2. Core Physical Meaning
 
-> **Noise added early gets amplified by everything after it.  
+> **Noise added early is amplified by everything that follows.  
 > Noise added later is suppressed by earlier gain.**
 
-This single idea explains the entire Friis formula.
+This single idea is the physical foundation of Friis’ formula.
 
 ---
 
-## Step-by-Step Physical Picture
+## 3. Step-by-Step Physical Picture
 
-### Stage 1 (Front End)
+### Stage 1 (Front-End Stage)
 
-- Sees the input signal plus unavoidable thermal noise
+- Sees the incoming signal plus unavoidable thermal noise
 - Adds its own internal noise
-- **Everything at its output is amplified by all later stages**
+- Its output is amplified by **all subsequent stages**
 
 Therefore:
-- Noise from stage 1 dominates the total noise
+- Noise from stage 1 dominates the total system noise
 
 ---
 
 ### Stage 2
 
-- Adds noise of its own
-- But this noise is **not amplified by stage 1**
-- Its contribution is divided by $G_1$
+- Adds its own noise
+- That noise is **not amplified by stage 1**
+- Its contribution is divided by the gain of stage 1, $G_1$
 
-Physically:
+Physical interpretation:
 
-> The more gain stage 1 provides, the less noticeable stage-2 noise becomes.
-
----
-
-### Stage 3 and Beyond
-
-- Noise is divided by $G_1 G_2$
-- Often negligible if early gain is high
+> The higher the gain of stage 1, the less visible the noise from stage 2 becomes.
 
 ---
 
-## Why the Formula Looks This Way
+### Stage 3 and Later Stages
+
+- Noise contribution is divided by $G_1 G_2$
+- Often negligible if sufficient gain exists early in the chain
+
+---
+
+## 4. Why the Formula Has This Structure
 
 Each stage contributes only its **excess noise**:
 
@@ -73,9 +74,8 @@ F_i - 1
 $$
 
 That excess noise is:
-
 - Fully counted for stage 1
-- Suppressed by previous gain for later stages
+- Suppressed by all previous gains for later stages
 
 General contribution of stage $i$:
 
@@ -88,15 +88,19 @@ $$
 
 ---
 
-## Equivalent Noise Temperature Form (Very Physical)
+## 5. Equivalent Noise Temperature Form (Very Physical)
 
-Using the relation:
+Noise factor and equivalent noise temperature are related by:
 
 $$
 F = 1 + \frac{T_e}{T_0}
 $$
 
-Friis’ formula becomes:
+where:
+- $T_e$ = equivalent noise temperature of the stage
+- $T_0 = 290 \ \text{K}$ (reference temperature)
+
+Using this, Friis’ formula becomes:
 
 $$
 T_{e,\text{total}}
@@ -113,24 +117,27 @@ $$
 
 ---
 
-## Practical RF Intuition
+## 6. Practical RF Design Intuition
 
-### Why LNAs Must Come First
+### Why the LNA Must Come First
 
 - First stage has the **lowest noise factor**
-- Also provides **high gain**
-- This minimizes the effect of noise from all later stages
+- First stage also provides **high gain**
+- This minimizes the impact of noise added by later stages
+
+Result:
+- The first stage dominates overall system noise performance
 
 ---
 
 ### Why Passive Loss Before the LNA Is Dangerous
 
-Consider a lossy element with loss $L$:
+Consider a passive element with loss $L$:
 
 - Noise factor: $F = L$
 - Gain: $G = \frac{1}{L}$
 
-Placed before the LNA:
+Placed before an LNA:
 
 $$
 F_{\text{total}}
@@ -139,13 +146,32 @@ L
 + \frac{F_{\text{LNA}} - 1}{1/L}
 $$
 
-### Physical Meaning
+### Physical Interpretation
 
-> Loss before gain behaves like a noisy amplifier at room temperature.  
+> Loss before gain behaves like a noisy, room-temperature amplifier.  
 > It severely degrades receiver sensitivity.
 
 ---
 
-## One-Sentence Exam-Safe Explanation
+## 7. One-Sentence Exam-Safe Explanation
 
 > **Friis’ formula shows that the noise performance of a cascaded system is dominated by the first stage, because its noise is amplified by all subsequent stages, while noise added later is suppressed by earlier gain.**
+
+---
+
+## 8. Key Takeaways
+
+- Use **linear** values for $F$ and $G$
+- Early noise matters most
+- Early gain suppresses later noise
+- Low-noise, high-gain first stage is critical
+- Passive loss before gain is highly destructive
+
+---
+
+## 9. What This Leads To
+
+- Receiver sensitivity analysis
+- LNA placement rules
+- Filter vs amplifier trade-offs
+- Complete noise figure budgeting
