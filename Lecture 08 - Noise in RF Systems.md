@@ -134,6 +134,8 @@ An active noise source is a powered circuit that intentionally generates noise u
 
 This slide explains **noise sources**, **noise temperature**, and **Excess Noise Ratio (ENR)**, which are fundamental concepts in RF and microwave measurements.
 
+
+##  ENR(excess noise ratio)  How much hotter the noise source is than room temperature
 ---
 
 ## 1. Noise Through an Amplifier
