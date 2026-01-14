@@ -490,3 +490,8 @@ This directly leads to the **Friis Noise Formula** for cascaded stages.
 - $\text{NF} = 10 \log_{10}(F)$
 - Lower NF ⇒ better receiver sensitivity
 - First stage NF is critical
+
+
+
+# Noise Figure of a Cascaded system
+
