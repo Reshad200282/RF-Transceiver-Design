@@ -1,4 +1,4 @@
-# Physical Meaning of Noise Factor
+# Physical Meaning of Noise Factor 
 
 This section explains the **physical meaning of Noise Factor (F)** — not just the formula, but what it actually represents in real RF systems.
 
@@ -142,3 +142,23 @@ $$
 Even simpler:
 
 > **Noise factor = how badly a device degrades the signal-to-noise ratio.**
+>
+> ## 3. Excess Noise Ratio (ENR)
+
+### Definition (Power Form)
+
+The **Excess Noise Ratio (ENR)** is defined as:
+
+$$
+\text{ENR (dB)} = 10 \log_{10}
+\left(
+\frac{N_g - N_0}{N_0}
+\right)
+$$
+
+where:
+- $N_g$ = noise power when the noise generator is **ON**
+- $N_0$ = thermal noise power of a 50 Ω resistor at room temperature
+
+ENR measures how much **additional noise** the source produces beyond thermal noise.
+
