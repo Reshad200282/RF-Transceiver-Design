@@ -130,4 +130,138 @@ An active noise source is a powered circuit that intentionally generates noise u
 
 <img width="1730" height="960" alt="image" src="https://github.com/user-attachments/assets/34db5c85-1fe9-406e-bba2-75d7f4637afd" />
 
+# Noise Sources, Noise Temperature, and Excess Noise Ratio (ENR)
+
+This slide explains **noise sources**, **noise temperature**, and **Excess Noise Ratio (ENR)**, which are fundamental concepts in RF and microwave measurements.
+
+---
+
+## 1. Noise Through an Amplifier
+
+### Input Noise
+
+- $N_0$ : Thermal noise power from a matched source  
+  (usually **50 Ω at room temperature**)
+
+Thermal noise power is given by:
+
+$$
+N_0 = k T B
+$$
+
+where:
+- $k$ = Boltzmann’s constant  
+- $T$ = absolute temperature (≈ 290 K at room temperature)  
+- $B$ = bandwidth (Hz)
+
+---
+
+### Amplifier
+
+- Gain = $G$
+- Assumed **linear** and **impedance matched**
+
+---
+
+### Output Noise
+
+After amplification, the output noise power becomes:
+
+$$
+P_o = G k T B
+$$
+
+This shows that thermal noise at the input is simply multiplied by the amplifier gain.
+
+---
+
+### Equivalent Noise Temperature
+
+The equivalent noise temperature is defined as:
+
+$$
+T_e = \frac{N_0}{G k B}
+$$
+
+**Interpretation:**
+- $T_e$ represents the input temperature that would generate the observed noise power
+- It allows noise to be expressed in **temperature units** instead of watts
+- Very useful for characterizing noisy RF devices
+
+---
+
+## 2. Active Noise Source
+
+An **active noise source** is a calibrated device designed to intentionally generate noise.
+
+### Examples
+- Noise diodes  
+- Vacuum tubes  
+- Solid-state noise sources  
+
+### Why They Are Useful
+- Produce **known and repeatable noise levels**
+- Essential for measuring **noise figure** and **receiver sensitivity**
+- Allow accurate system testing using controlled noise input
+
+---
+
+## 3. Excess Noise Ratio (ENR)
+
+### Definition (Power Form)
+
+The **Excess Noise Ratio (ENR)** is defined as:
+
+$$
+\text{ENR (dB)} = 10 \log_{10}
+\left(
+\frac{N_g - N_0}{N_0}
+\right)
+$$
+
+where:
+- $N_g$ = noise power when the noise generator is **ON**
+- $N_0$ = thermal noise power of a 50 Ω resistor at room temperature
+
+ENR measures how much **additional noise** the source produces beyond thermal noise.
+
+---
+
+### Temperature Form (Important)
+
+ENR can also be expressed using noise temperature:
+
+$$
+\text{ENR (dB)} = 10 \log_{10}
+\left(
+\frac{T_g - T_0}{T_0}
+\right)
+$$
+
+where:
+- $T_g$ = equivalent noise temperature of the noise generator
+- $T_0$ = room temperature (≈ 290 K)
+
+**Key Insight:**
+- ENR is fundamentally a **temperature ratio**
+- A high ENR corresponds to a very high equivalent noise temperature
+
+---
+
+## 4. Definitions (Bottom Notes)
+
+- $N_g$ : Noise power from the **noise generator**
+- $N_0$ : Noise power from a **50 Ω termination at room temperature**
+
+These represent the two reference noise states used in practical **ON/OFF noise measurements**.
+
+---
+
+## Big Picture Intuition
+
+- Thermal noise originates from temperature: $kTB$
+- Amplifiers increase noise power by their gain
+- Noise sources behave like extremely “hot” resistors
+- ENR indicates how much hotter the noise source is compared to room temperature
+- These concepts are essential for **noise figure measurement** and **receiver performance evaluation**
 
