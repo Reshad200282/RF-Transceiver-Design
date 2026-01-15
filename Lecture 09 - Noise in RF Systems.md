@@ -4,24 +4,18 @@
 
 <img width="1203" height="434" alt="image" src="https://github.com/user-attachments/assets/b3263d8f-e560-4b42-9ae2-23e7aa7b350d" />
 
-Got it 😄 — I’ll switch things up and keep emojis varied.
-Here’s the **same diode-noise explanation**, cleaned, structured, and **note-ready**, with **different emojis** used intentionally.
-
----
-
 # 📡 Diode Noise – Useful for Noise Calculations
 
 ## 🔌 1. Practical Noise Model of a Diode
 
 When a diode conducts a DC current $I_D$, it is modeled as:
 
-* Series resistance: $R_s$
-* Dynamic (junction) resistance: $r_d$
-* Noise sources:
-
-  * 🌡️ Thermal noise (from $R_s$)
-  * 🎯 Shot noise (from DC current flow)
-  * 🌊 Flicker noise (low-frequency noise)
+- Series resistance: $R_s$
+- Dynamic (junction) resistance: $r_d$
+- Noise sources:
+  - 🌡️ Thermal noise (from $R_s$)
+  - 🎯 Shot noise (from DC current flow)
+  - 🌊 Flicker noise (low-frequency noise)
 
 This is the **real RF diode model**, not an ideal one.
 
@@ -31,57 +25,49 @@ This is the **real RF diode model**, not an ideal one.
 
 The series resistance $R_s$ generates **thermal (Johnson–Nyquist) noise**.
 
-### Noise voltage:
+### Noise voltage (mean-square)
 
-[
-\boxed{
+$$
 v_s^2 = 4 k T R_s \Delta f
-}
-]
+$$
 
-### Power Spectral Density (PSD):
+### Power Spectral Density (PSD)
 
-[
-\boxed{
+$$
 S_{v_s}(f) = 4 k T R_s \quad (\text{V}^2/\text{Hz})
-}
-]
+$$
 
 ### 🧠 Physical Meaning
 
-* Due to random thermal motion of carriers
-* Exists even without DC current
-* Depends only on $T$ and $R_s$
+- Due to random thermal motion of carriers
+- Exists even without DC current
+- Depends only on temperature $T$ and resistance $R_s$
 
 ---
 
 ## 🎯 3. Shot Noise (Dominant Noise in Diodes)
 
-When DC current flows, charge carriers cross the junction randomly → **shot noise**.
+When DC current flows, charge carriers cross the junction randomly, producing **shot noise**.
 
-### Shot noise current:
+### Shot noise current (mean-square)
 
-[
-\boxed{
+$$
 i_s^2 = 2 q I_D \Delta f
-}
-]
+$$
 
-### Shot noise PSD:
+### Shot noise PSD
 
-[
-\boxed{
+$$
 S_{i_s}(f) = 2 q I_D \quad (\text{A}^2/\text{Hz})
-}
-]
+$$
 
 ### 🔍 Physical Meaning
 
-* Comes from discrete electron flow
-* Proportional to DC current
-* **Dominant noise in forward-biased diodes**
+- Comes from discrete electron flow
+- Proportional to DC current
+- **Dominant noise in forward-biased diodes**
 
-✔️ This is why your instructor emphasized shot noise.
+✔️ This is why shot noise dominates in RF diode operation.
 
 ---
 
@@ -89,55 +75,55 @@ S_{i_s}(f) = 2 q I_D \quad (\text{A}^2/\text{Hz})
 
 At low frequencies, **flicker noise** becomes significant.
 
-### Flicker noise model:
+### Flicker noise PSD model
 
-[
-\boxed{
-S_{i_f}(f) = \frac{K I_D^a}{f^b} \Delta f
-}
-]
+$$
+S_{i_f}(f) = \frac{K I_D^a}{f^b}
+$$
 
-Where:
+where:
 
-* $K$ → device-dependent constant
-* $a$ → typically $0.5 \le a \le 2$
-* $b$ → approximately $1$
-* $f$ → frequency
+- $K$ → device-dependent constant
+- $I_D$ → DC diode current
+- $a \approx 0.5 \le a \le 2$
+- $b \approx 1$
+- $f$ → frequency
 
 ### 📉 Key Property
 
-* Inversely proportional to frequency
-* Dominates at **low frequencies**
-* Strongly dependent on fabrication process
+$$
+S(f) \propto \frac{1}{f}
+$$
+
+- Dominates at **low frequencies**
+- Strongly process-dependent
 
 ---
 
 ## 🧮 5. Total Noise in a Diode
 
-The overall diode noise is:
+The total diode noise power spectral density is the sum of all components:
 
-[
-\boxed{
-\text{Total Noise} =
-4 k T R_s
+$$
+S_{\text{total}} =
+\underbrace{4 k T R_s}_{\text{Thermal}}
 +
-2 q I_D
+\underbrace{2 q I_D}_{\text{Shot}}
 +
-\frac{K I_D^a}{f^b}
-}
-]
+\underbrace{\frac{K I_D^a}{f^b}}_{\text{Flicker}}
+$$
 
-Each term dominates under different conditions.
+Each term dominates under different operating conditions.
 
 ---
 
 ## ⚖️ 6. Which Noise Dominates?
 
 | Condition               | Dominant Noise    |
-| ----------------------- | ----------------- |
+|------------------------|-------------------|
 | Forward-biased RF diode | 🎯 Shot noise     |
 | Large series resistance | 🌡️ Thermal noise |
-| Low frequency operation | 🌊 Flicker noise  |
+| Low-frequency operation | 🌊 Flicker noise  |
 
 ---
 
@@ -145,21 +131,21 @@ Each term dominates under different conditions.
 
 Diodes are widely used as:
 
-* RF switches
-* TDD / TDMA switching elements
-* High-speed control devices
+- RF switches
+- TDD / TDMA switching elements
+- High-speed control devices
 
 ### ⚠️ Impact of Diode Noise
 
-* Raises receiver noise floor
-* Reduces sensitivity
-* Limits weak-signal detection
+- Raises receiver noise floor
+- Reduces sensitivity
+- Limits weak-signal detection
 
 Even though diodes are simple and fast, **their noise cannot be ignored**.
 
 ---
 
-## 📝 8. Exam-Ready One-Liner
+## 📝 8. Exam-Ready One-Liner ⭐
 
 > In a forward-biased diode, shot noise due to DC current is the dominant noise source, while thermal noise arises from series resistance and flicker noise dominates at low frequencies.
 
@@ -169,16 +155,6 @@ Even though diodes are simple and fast, **their noise cannot be ignored**.
 
 After diode noise:
 
-* BJT noise modeling
-* MOSFET / FET noise
-* Linearity and distortion (1-dB compression, IP3)
-
----
-
-If you want next 📘:
-
-* Numerical example
-* Comparison table (Diode vs BJT vs MOSFET)
-* Or connect this with **noise figure** and **1-dB compression**
-
-Just say the word 👍
+- BJT noise modeling
+- MOSFET / FET noise
+- Linearity and distortion (1-dB compression, IP3)
