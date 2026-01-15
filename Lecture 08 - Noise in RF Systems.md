@@ -495,3 +495,7 @@ This directly leads to the **Friis Noise Formula** for cascaded stages.
 
 # Noise Figure of a Cascaded system
 
+<img width="1199" height="587" alt="image" src="https://github.com/user-attachments/assets/ddc9878c-e750-4b43-b729-b02f35b9f617" />
+<img width="1207" height="594" alt="image" src="https://github.com/user-attachments/assets/b868daea-74b6-438e-bb3a-b016c7450ed0" />
+
+
